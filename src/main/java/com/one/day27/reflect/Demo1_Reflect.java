@@ -1,12 +1,12 @@
-package day27.reflect;
+package com.one.day27.reflect;
 
-import day27.bean.Person;
+import com.one.day27.bean.Person;
 
 public class Demo1_Reflect {
 
     public static void main(String[] args) throws ClassNotFoundException {
 
-        Class clazz1 = Class.forName("day27.bean.Person");
+        Class clazz1 = Class.forName("com.one.day27.bean.Person");
         Class clazz2 = Person.class;
 
         Person p = new Person();

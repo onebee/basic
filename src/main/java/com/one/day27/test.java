@@ -1,4 +1,4 @@
-package day27;
+package com.one.day27;
 
 public interface test {
 

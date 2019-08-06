@@ -1,4 +1,4 @@
-package day27.reflect;
+package com.one.day27.reflect;
 
 
 import java.io.BufferedReader;
@@ -8,13 +8,15 @@ import java.io.IOException;
 public class Demo2_Reflect {
 
     public static void main(String[] args) throws ClassNotFoundException, IOException, IllegalAccessException, InstantiationException {
-/*
+
+        /**
         Juicer j = new Juicer();
         j.run(new Apple());
-        j.run(new Orange());*/
+        j.run(new Orange());
+        */
 
 
-        BufferedReader br = new BufferedReader(new FileReader("src/config.properties"));
+        BufferedReader br = new BufferedReader(new FileReader("config.properties"));
         Class clazz = Class.forName(br.readLine());
         Fruit f = (Fruit) clazz.newInstance();
         Juicer j = new Juicer();
@@ -24,7 +26,7 @@ public class Demo2_Reflect {
 
 
 interface Fruit {
-    public void squeeze();
+    void squeeze();
 }
 
 class Apple implements Fruit {

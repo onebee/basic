@@ -1,4 +1,4 @@
-package day27.bean;
+package com.one.day27.bean;
 
 import java.util.Objects;
 
