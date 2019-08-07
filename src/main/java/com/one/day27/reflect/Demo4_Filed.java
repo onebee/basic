@@ -16,7 +16,7 @@ public class Demo4_Filed {
         Person person = (Person) constructor.newInstance("hand", 30);
 
 
-        Field f = clazz.getField("name");
+        Field f = clazz.getDeclaredField("name");
         f.setAccessible(true);
         f.set(person,"我们");
         System.out.println(person);
