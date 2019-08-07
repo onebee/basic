@@ -19,6 +19,7 @@ public class Demo4_Filed {
         Field f = clazz.getDeclaredField("name");
         f.setAccessible(true);
         f.set(person,"我们");
+
         System.out.println(person);
     }
 }
