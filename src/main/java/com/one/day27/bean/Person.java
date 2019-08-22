@@ -52,4 +52,12 @@ public class Person {
                 ", age=" + age +
                 '}';
     }
+
+    public void eat() {
+        System.out.println("今天吃了一顿金钱豹！");
+    }
+
+    public void eat(int num) {
+        System.out.println("今天吃了"+num+"顿金钱豹！");
+    }
 }
