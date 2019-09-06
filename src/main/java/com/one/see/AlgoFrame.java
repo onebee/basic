@@ -52,7 +52,7 @@ public class AlgoFrame extends JFrame {
 
             Ellipse2D circle = new Ellipse2D.Double(50,50,300,300);
 
-            int strokeWidth = 10;
+            int strokeWidth = 5;
 
             g2d.setStroke(new BasicStroke(strokeWidth));
 
