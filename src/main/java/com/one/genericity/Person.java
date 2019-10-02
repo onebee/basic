@@ -17,4 +17,6 @@ public class Person<E> {
     public <T> void show2(T t) {
         System.out.println(t);
     }
+
+
 }
