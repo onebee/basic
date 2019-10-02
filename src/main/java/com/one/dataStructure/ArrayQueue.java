@@ -1,5 +1,7 @@
 package com.one.dataStructure;
 
+import java.util.Arrays;
+
 /**
  * 用数组实现的队列
  */
@@ -21,6 +23,7 @@ public class ArrayQueue {
      */
     public ArrayQueue(int capacity) {
         items = new String[capacity];
+        n = capacity;
     }
 
 
@@ -41,5 +44,12 @@ public class ArrayQueue {
         ++head;
         return ret;
 
+    }
+
+    @Override
+    public String toString() {
+        return "ArrayQueue{" +
+                "items=" + Arrays.toString(items) +
+                '}'  + "  ---- head : " + head +"  tail : " + tail;
     }
 }
