@@ -51,8 +51,9 @@ public class AlgoFrame extends JFrame {
             Graphics2D g2d = (Graphics2D) g;
 
             // 抗锯齿
-            RenderingHints renderingHints = new RenderingHints(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_ANTIALIAS_ON);
+            RenderingHints renderingHints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
+            g2d.addRenderingHints(renderingHints);
 
             AlgoVisHelper.setStrokeWidth(g2d, 10);
 
