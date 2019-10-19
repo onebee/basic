@@ -44,6 +44,11 @@ public class AlgoFrame extends JFrame {
 
     private class AlgoCanvas extends JPanel {
 
+
+        public AlgoCanvas() {
+            super(true );
+        }
+
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
