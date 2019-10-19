@@ -42,11 +42,19 @@ public class AlgoFrame extends JFrame {
     }
 
 
+    private Circle[] circles;
+
+    public void render(Circle[] circles) {
+        this.circles = circles;
+        repaint();
+    }
+
+
     private class AlgoCanvas extends JPanel {
 
 
         public AlgoCanvas() {
-            super(true );
+            super(true);
         }
 
         @Override
@@ -57,17 +65,27 @@ public class AlgoFrame extends JFrame {
 
             // 抗锯齿
             RenderingHints renderingHints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
             g2d.addRenderingHints(renderingHints);
 
-            AlgoVisHelper.setStrokeWidth(g2d, 10);
+//            AlgoVisHelper.setStrokeWidth(g2d, 10);
+//
+//
+//            AlgoVisHelper.setColor(g2d, Color.CYAN);
+//            AlgoVisHelper.fillCircle(g2d, canvasWidth / 2, canvasHeight / 2, 200);
+//
+//            g2d.setColor(Color.red);
+//            AlgoVisHelper.strokeCircle(g2d, canvasWidth / 2, canvasHeight / 2, 200);
 
 
-            AlgoVisHelper.setColor(g2d, Color.CYAN);
-            AlgoVisHelper.fillCircle(g2d, canvasWidth / 2, canvasHeight / 2, 200);
+            // 具体绘制
+            AlgoVisHelper.setStrokeWidth(g2d,1);
+            AlgoVisHelper.setColor(g2d,Color.RED);
+            for (Circle circle : circles) {
 
-            g2d.setColor(Color.red);
-            AlgoVisHelper.strokeCircle(g2d, canvasWidth / 2, canvasHeight / 2, 200);
+                AlgoVisHelper.strokeCircle(g2d,circle.x,circle.y,circle.getR());
+            }
+
+
 
         }
 

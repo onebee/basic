@@ -50,4 +50,12 @@ public class AlgoVisHelper {
         graphics2D.setColor(color);
 
     }
+
+    public static void pause(int time) {
+        try {
+            Thread.sleep(time);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
