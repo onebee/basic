@@ -42,21 +42,26 @@ public class AlgoFrame extends JFrame {
     }
 
 
-    private class AlgoCanvas extends JPanel{
+    private class AlgoCanvas extends JPanel {
 
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
 
-            Graphics2D g2d = (Graphics2D)g;
-            AlgoVisHelper.setStrokeWidth(g2d,10);
+            Graphics2D g2d = (Graphics2D) g;
+
+            // 抗锯齿
+            RenderingHints renderingHints = new RenderingHints(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_ANTIALIAS_ON);
 
 
-            AlgoVisHelper.setColor(g2d,Color.CYAN);
-            AlgoVisHelper.fillCircle(g2d,canvasWidth/2,canvasHeight/2,200);
+            AlgoVisHelper.setStrokeWidth(g2d, 10);
+
+
+            AlgoVisHelper.setColor(g2d, Color.CYAN);
+            AlgoVisHelper.fillCircle(g2d, canvasWidth / 2, canvasHeight / 2, 200);
 
             g2d.setColor(Color.red);
-            AlgoVisHelper.strokeCircle(g2d,canvasWidth/2,canvasHeight/2,200);
+            AlgoVisHelper.strokeCircle(g2d, canvasWidth / 2, canvasHeight / 2, 200);
 
         }
 
@@ -64,7 +69,7 @@ public class AlgoFrame extends JFrame {
         @Override
         public Dimension getPreferredSize() {
 
-            return new Dimension(canvasWidth,canvasHeight);
+            return new Dimension(canvasWidth, canvasHeight);
         }
     }
 }
