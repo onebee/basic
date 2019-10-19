@@ -49,19 +49,15 @@ public class AlgoFrame extends JFrame {
             super.paintComponent(g);
 
             Graphics2D g2d = (Graphics2D)g;
+            AlgoVisHelper.setStrokeWidth(g2d,10);
 
-            Ellipse2D circle = new Ellipse2D.Double(50,50,300,300);
 
+            AlgoVisHelper.setColor(g2d,Color.CYAN);
+            AlgoVisHelper.fillCircle(g2d,canvasWidth/2,canvasHeight/2,200);
 
             g2d.setColor(Color.red);
-            g2d.draw(circle);
+            AlgoVisHelper.strokeCircle(g2d,canvasWidth/2,canvasHeight/2,200);
 
-
-            g2d.setColor(Color.yellow);
-            Ellipse2D circle2 = new Ellipse2D.Double(60,60,280,280);
-            g2d.fill(circle2);
-            // 个性化绘制代码
-//            g2d.drawOval(50,50,300,300);
         }
 
 
