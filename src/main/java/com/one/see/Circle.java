@@ -1,5 +1,7 @@
 package com.one.see;
 
+import java.awt.*;
+
 public class Circle {
 
     public int x, y;
@@ -8,6 +10,8 @@ public class Circle {
 
 
     public int vx, vy;
+
+    public boolean isFilled = false;
 
     public Circle(int x, int y, int r, int vx, int vy) {
         this.x = x;
@@ -60,5 +64,11 @@ public class Circle {
         }
 
 
+    }
+
+    // 判断传入的坐标是否在该圆内
+    public boolean contain(Point point) {
+       // 判断点到圆心的距离是否小于R
+        return (x-point.x)*(x-point.x) + (y-point.y)*(y-point.y) <= r*r;
     }
 }

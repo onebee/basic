@@ -78,22 +78,26 @@ public class AlgoFrame extends JFrame {
 
 
             // 具体绘制
-            AlgoVisHelper.setStrokeWidth(g2d,1);
-            AlgoVisHelper.setColor(g2d,Color.RED);
+            AlgoVisHelper.setStrokeWidth(g2d, 1);
+            AlgoVisHelper.setColor(g2d, Color.RED);
             for (Circle circle : circles) {
+                if (circle.isFilled) {
+                    AlgoVisHelper.fillCircle(g2d, circle.x, circle.y, circle.getR());
+                } else {
+                    AlgoVisHelper.strokeCircle(g2d, circle.x, circle.y, circle.getR());
 
-                AlgoVisHelper.strokeCircle(g2d,circle.x,circle.y,circle.getR());
+                }
             }
-
-
-
         }
 
 
-        @Override
-        public Dimension getPreferredSize() {
+    }
 
-            return new Dimension(canvasWidth, canvasHeight);
-        }
+
+    @Override
+    public Dimension getPreferredSize() {
+
+        return new Dimension(canvasWidth, canvasHeight);
     }
 }
+

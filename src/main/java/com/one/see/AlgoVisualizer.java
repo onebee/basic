@@ -1,9 +1,7 @@
 package com.one.see;
 
 import java.awt.*;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 
 /***
  * 相当于Control 层
@@ -34,6 +32,7 @@ public class AlgoVisualizer {
 
             frame = new AlgoFrame("one", screenWidth, screenHeight);
             frame.addKeyListener(new AlgoKeyListener());
+            frame.addMouseListener(new MouseListener());
             new Thread(this::run).start();
 
         });
@@ -69,6 +68,23 @@ public class AlgoVisualizer {
             super.keyReleased(e);
             if (e.getKeyChar()== ' ') {
                 isAnimated = !isAnimated;
+            }
+
+        }
+    }
+
+    private class MouseListener extends MouseAdapter {
+        @Override
+        public void mousePressed(MouseEvent event) {
+            super.mousePressed(event);
+            event.translatePoint(0,-(frame.getBounds().height-frame.getCanvasHeight()));
+//            System.out.println(event.getPoint());
+
+            for (Circle circle : circles) {
+                if (circle.contain(event.getPoint())) {
+
+                    circle.isFilled = !circle.isFilled;
+                }
             }
 
         }
