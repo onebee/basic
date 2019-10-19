@@ -1,6 +1,9 @@
 package com.one.see;
 
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 /***
  * 相当于Control 层
@@ -8,8 +11,11 @@ import java.awt.*;
 public class AlgoVisualizer {
 
 
+
     private Circle[] circles;
     private AlgoFrame frame;
+
+    private boolean isAnimated = true;
 
     public AlgoVisualizer(int screenWidth, int screenHeight, int N) {
 
@@ -27,6 +33,7 @@ public class AlgoVisualizer {
         EventQueue.invokeLater(() -> {
 
             frame = new AlgoFrame("one", screenWidth, screenHeight);
+            frame.addKeyListener(new AlgoKeyListener());
             new Thread(this::run).start();
 
         });
@@ -43,13 +50,42 @@ public class AlgoVisualizer {
             AlgoVisHelper.pause(50);
 
             //更新数据
-            for (Circle circle : circles) {
-                circle.move(0, 0, frame.getCanvasWidth(), frame.getCanvasHeight());
+            if (isAnimated) {
+                for (Circle circle : circles) {
+                    circle.move(0, 0, frame.getCanvasWidth(), frame.getCanvasHeight());
+                }
             }
+
 
         }
 
     }
 
+
+    private class AlgoKeyListener extends KeyAdapter {
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+            super.keyReleased(e);
+            if (e.getKeyChar()== ' ') {
+                isAnimated = !isAnimated;
+            }
+
+        }
+    }
+
+    public static void main(String[] args) {
+
+        int screenWidth = 800;
+        int screenHeight = 800;
+        int N = 25;
+
+        AlgoVisualizer visualizer = new AlgoVisualizer(screenWidth,screenHeight,N);
+
+        // JAVA 事件分发线程
+
+
+
+    }
 
 }
