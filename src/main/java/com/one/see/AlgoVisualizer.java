@@ -94,7 +94,7 @@ public class AlgoVisualizer {
 
         int screenWidth = 800;
         int screenHeight = 800;
-        int N = 1025;
+        int N = 25;
 
         AlgoVisualizer visualizer = new AlgoVisualizer(screenWidth,screenHeight,N);
 
