@@ -15,12 +15,31 @@ public class Array<E> {
     }
 
     // 获取数组的容量
+    public int getCapacity() {
+        return data.length;
+    }
 
     //获取数组中元素的个数
+    public int getSize() {
+        return size;
+    }
 
     // 返回数组是否为空
+    public boolean isEmpty(){
+        return size==0;
+    }
 
     // 在index 索引的位置插入一个新元素e
+    void add(int index,E e) {
+        if (index<0 || index > size)
+           throw  new IllegalArgumentException("Add failed ! Require index=>0 and index <=size");
+
+        if (size==data.length)
+            resize(2*data.length);
+
+    }
+
+
 
     // 向所有元素后添加一个新元素
 
@@ -46,5 +65,8 @@ public class Array<E> {
 
 
     // 将数组空间的容量变成newCapacity大小
+    private void resize(int capacity) {
+
+    }
 
 }
