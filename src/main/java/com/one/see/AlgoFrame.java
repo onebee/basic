@@ -42,33 +42,62 @@ public class AlgoFrame extends JFrame {
     }
 
 
-    private class AlgoCanvas extends JPanel{
+    private Circle[] circles;
+
+    public void render(Circle[] circles) {
+        this.circles = circles;
+        repaint();
+    }
+
+
+    private class AlgoCanvas extends JPanel {
+
+
+        public AlgoCanvas() {
+            super(true);
+        }
 
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
 
-            Graphics2D g2d = (Graphics2D)g;
+            Graphics2D g2d = (Graphics2D) g;
 
-            Ellipse2D circle = new Ellipse2D.Double(50,50,300,300);
+            // 抗锯齿
+            RenderingHints renderingHints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+            g2d.addRenderingHints(renderingHints);
+
+//            AlgoVisHelper.setStrokeWidth(g2d, 10);
+//
+//
+//            AlgoVisHelper.setColor(g2d, Color.CYAN);
+//            AlgoVisHelper.fillCircle(g2d, canvasWidth / 2, canvasHeight / 2, 200);
+//
+//            g2d.setColor(Color.red);
+//            AlgoVisHelper.strokeCircle(g2d, canvasWidth / 2, canvasHeight / 2, 200);
 
 
-            g2d.setColor(Color.red);
-            g2d.draw(circle);
+            // 具体绘制
+            AlgoVisHelper.setStrokeWidth(g2d, 1);
+            AlgoVisHelper.setColor(g2d, Color.RED);
+            for (Circle circle : circles) {
+                if (circle.isFilled) {
+                    AlgoVisHelper.fillCircle(g2d, circle.x, circle.y, circle.getR());
+                } else {
+                    AlgoVisHelper.strokeCircle(g2d, circle.x, circle.y, circle.getR());
 
-
-            g2d.setColor(Color.yellow);
-            Ellipse2D circle2 = new Ellipse2D.Double(60,60,280,280);
-            g2d.fill(circle2);
-            // 个性化绘制代码
-//            g2d.drawOval(50,50,300,300);
+                }
+            }
         }
 
 
-        @Override
-        public Dimension getPreferredSize() {
+    }
 
-            return new Dimension(canvasWidth,canvasHeight);
-        }
+
+    @Override
+    public Dimension getPreferredSize() {
+
+        return new Dimension(canvasWidth, canvasHeight);
     }
 }
+
