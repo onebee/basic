@@ -1,4 +1,4 @@
-package com.one.day27.动态代理;
+package com.one.day27.dynamicProxy;
 
 public interface User {
 

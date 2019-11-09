@@ -1,4 +1,4 @@
-package com.one.day27.åŠ¨æ€ä»£ç†;
+package com.one.day27.dynamicProxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -14,10 +14,10 @@ public class MyInvocationHandler implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 
 
-        System.out.println("æƒé™æ ¡éªŒ");
-        // æ‰§è¡Œè¢«ä»£ç†target å¯¹è±¡çš„æ–¹æ³•
+        System.out.println("È¨ÏŞĞ£Ñé");
+        // Ö´ĞĞ±»´úÀítarget ¶ÔÏóµÄ·½·¨
         method.invoke(target,args);
-        System.out.println("æ—¥å¿—è®°å½•");
+        System.out.println("ÈÕÖ¾¼ÇÂ¼");
         return null;
     }
 }

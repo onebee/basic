@@ -3,7 +3,7 @@ package com.one.dataStructure;
 import java.util.Arrays;
 
 /**
- * ç”¨æ•°ç»„å®ç°çš„é˜Ÿåˆ—
+ * ÓÃÊı×éÊµÏÖµÄ¶ÓÁĞ
  */
 public class ArrayQueue {
 
@@ -11,14 +11,14 @@ public class ArrayQueue {
     private String[] items;
     private int n;
 
-    // é˜Ÿå¤´ä¸‹æ ‡
+    // ¶ÓÍ·ÏÂ±ê
     private int head = 0;
 
-    // é˜Ÿå°¾ä¸‹æ ‡
+    // ¶ÓÎ²ÏÂ±ê
     private int tail = 0;
 
     /**
-     * ç”³è¯·å¤§å°ä¸ºcapacity çš„æ•°ç»„
+     * ÉêÇë´óĞ¡Îªcapacity µÄÊı×é
      *
      * @param capacity
      */
@@ -28,18 +28,18 @@ public class ArrayQueue {
     }
 
 
-    // å…¥é˜Ÿ
+    // Èë¶Ó
     public boolean enqueue(String item) {
-        // tail == n è¡¨ç¤ºé˜Ÿåˆ—æœ«å°¾æ²¡æœ‰ç©ºé—´äº†
+        // tail == n ±íÊ¾¶ÓÁĞÄ©Î²Ã»ÓĞ¿Õ¼äÁË
         if (tail == n) {
 
-            //   tail == n && head==0 è¡¨ç¤ºé˜Ÿåˆ—æ²¡æœ‰ç©ºé—´äº†
+            //   tail == n && head==0 ±íÊ¾¶ÓÁĞÃ»ÓĞ¿Õ¼äÁË
             if (head == 0) return false;
-            // æ•°æ®æ¬ç§»
+            // Êı¾İ°áÒÆ
             for (int i = head; i < tail; i++) {
                 items[i-head] = items[i];
             }
-            // æ¬ç§»ä¹‹åæ›´æ–° head å’Œ tail
+            // °áÒÆÖ®ºó¸üĞÂ head ºÍ tail
             tail = tail-head;
             head =0;
 
@@ -51,9 +51,9 @@ public class ArrayQueue {
         return true;
     }
 
-    // å‡ºé˜Ÿ
+    // ³ö¶Ó
     public String dequeue() {
-        // é˜Ÿåˆ—ä¸ºç©º
+        // ¶ÓÁĞÎª¿Õ
         if (head == tail) return null;
         String ret = items[head];
         ++head;

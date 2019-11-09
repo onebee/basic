@@ -4,10 +4,10 @@ public class HexTest {
     public static void main(String[] args) {
 
 //        CRC32 crc32 = new CRC32();
-//        crc32.update("è¿™æ˜¯ä¸€ä¸ªcrc32æ ¡éªŒçš„Sample".getBytes());
+//        crc32.update("ÕâÊÇÒ»¸öcrc32Ğ£ÑéµÄSample".getBytes());
 //        long value = crc32.getValue();
 //        System.out.println(value);
-//        // å°†è®¡ç®—å¾—åˆ°çš„å€¼ è½¬æ¢æˆ hex æ ¼å¼
+//        // ½«¼ÆËãµÃµ½µÄÖµ ×ª»»³É hex ¸ñÊ½
 //        String hex = ByteUtil.decimal2fitHex(value);
 //        System.out.println("hex : " + hex);
 
@@ -26,13 +26,13 @@ public class HexTest {
         int length = bytes[2]<<8;
         length += bytes[3];
 
-        //å–å‡ºæ•°æ®æ®µçš„æ•°æ®
+        //È¡³öÊı¾İ¶ÎµÄÊı¾İ
         int dataLength = length -7;
 
         byte[] date = new byte[dataLength];
         System.arraycopy(bytes, 7, date, 0, dataLength);
 
-        // æ‹¿åˆ°æ•°æ®
+        // ÄÃµ½Êı¾İ
         return new String(date);
 
     }

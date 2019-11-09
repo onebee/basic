@@ -16,7 +16,7 @@ public class AlgoFrame extends JFrame {
         this.canvasWidth = canvasWidth;
 
         AlgoCanvas canvas = new AlgoCanvas();
-        // è®¾ç½®ç”»å¸ƒçš„å¤§å°
+        // ÉèÖÃ»­²¼µÄ´óĞ¡
 //        canvas.setPreferredSize(new Dimension(canvasWidth,canvasHeight));
 //        setSize(canvasWidth, canvasHeight);
         setContentPane(canvas);
@@ -63,7 +63,7 @@ public class AlgoFrame extends JFrame {
 
             Graphics2D g2d = (Graphics2D) g;
 
-            // æŠ—é”¯é½¿
+            // ¿¹¾â³İ
             RenderingHints renderingHints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
             g2d.addRenderingHints(renderingHints);
 
@@ -77,7 +77,7 @@ public class AlgoFrame extends JFrame {
 //            AlgoVisHelper.strokeCircle(g2d, canvasWidth / 2, canvasHeight / 2, 200);
 
 
-            // å…·ä½“ç»˜åˆ¶
+            // ¾ßÌå»æÖÆ
             AlgoVisHelper.setStrokeWidth(g2d, 1);
             AlgoVisHelper.setColor(g2d, Color.RED);
             for (Circle circle : circles) {

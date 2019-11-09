@@ -54,10 +54,10 @@ public class Person {
     }
 
     public void eat() {
-        System.out.println("ä»Šå¤©åƒäº†ä¸€é¡¿é‡‘é’±è±¹ï¼");
+        System.out.println("½ñÌì³ÔÁËÒ»¶Ù½ğÇ®±ª£¡");
     }
 
     public void eat(int num) {
-        System.out.println("ä»Šå¤©åƒäº†"+num+"é¡¿é‡‘é’±è±¹ï¼");
+        System.out.println("½ñÌì³ÔÁË"+num+"¶Ù½ğÇ®±ª£¡");
     }
 }

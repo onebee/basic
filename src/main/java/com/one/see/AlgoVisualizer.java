@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 /***
- * ç›¸å½“äºControl å±‚
+ * Ïàµ±ÓÚControl ²ã
  */
 public class AlgoVisualizer {
 
@@ -40,15 +40,15 @@ public class AlgoVisualizer {
 
     }
 
-    // åŠ¨ç”»é€»è¾‘
+    // ¶¯»­Âß¼­
     private void run() {
 
         while (true) {
-            // ç»˜åˆ¶æ•°æ®
+            // »æÖÆÊı¾İ
             frame.render(circles);
             AlgoVisHelper.pause(50);
 
-            //æ›´æ–°æ•°æ®
+            //¸üĞÂÊı¾İ
             if (isAnimated) {
                 for (Circle circle : circles) {
                     circle.move(0, 0, frame.getCanvasWidth(), frame.getCanvasHeight());
@@ -98,7 +98,7 @@ public class AlgoVisualizer {
 
         AlgoVisualizer visualizer = new AlgoVisualizer(screenWidth,screenHeight,N);
 
-        // JAVA äº‹ä»¶åˆ†å‘çº¿ç¨‹
+        // JAVA ÊÂ¼ş·Ö·¢Ïß³Ì
 
 
 

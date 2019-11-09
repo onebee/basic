@@ -6,18 +6,18 @@ import java.io.IOException;
 public class main {
 
     public static void main(String[] args) throws IOException {
-        //åˆ›å»ºæ–‡ä»¶å¯¹è±¡
+        //´´½¨ÎÄ¼ş¶ÔÏó
         File file = new File("Test22.java");
         if (!file.exists()) {
                 file.createNewFile();
         }
-        //è·å–æ–‡ä»¶çš„ç»å¯¹è·¯å¾„ï¼Œå³å…¨è·¯å¾„
+        //»ñÈ¡ÎÄ¼şµÄ¾ø¶ÔÂ·¾¶£¬¼´È«Â·¾¶
         String absPath = file.getAbsolutePath();
-        //Fileä¸­å°è£…çš„è·¯å¾„æ˜¯ä»€ä¹ˆè·å–åˆ°çš„å°±æ˜¯ä»€ä¹ˆã€‚
+        //FileÖĞ·â×°µÄÂ·¾¶ÊÇÊ²Ã´»ñÈ¡µ½µÄ¾ÍÊÇÊ²Ã´¡£
         String path = file.getPath();
-        //è·å–æ–‡ä»¶åç§°
+        //»ñÈ¡ÎÄ¼şÃû³Æ
         String filename = file.getName();
-        //è·å–æ–‡ä»¶å¤§å°
+        //»ñÈ¡ÎÄ¼ş´óĞ¡
         long size = file.length();
 
         System.out.println("absPath="+absPath);

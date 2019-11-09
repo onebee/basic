@@ -11,9 +11,9 @@ public class main {
 //
 //        test.world();
         Runtime runtime = Runtime.getRuntime();
-        System.out.println("å¤„ç†å™¨ä¸ªæ•°ï¼š" + runtime.availableProcessors());
-        System.out.println("ç©ºé—²å†…å­˜ï¼š" + runtime.freeMemory()/1024/1024 + "M");
-        System.out.println("æœ€å¤§å¯ç”¨å†…å­˜æ•°é‡ï¼š" + runtime.maxMemory() / 1024 / 1024 + "M");
+        System.out.println("´¦ÀíÆ÷¸öÊı£º" + runtime.availableProcessors());
+        System.out.println("¿ÕÏĞÄÚ´æ£º" + runtime.freeMemory()/1024/1024 + "M");
+        System.out.println("×î´ó¿ÉÓÃÄÚ´æÊıÁ¿£º" + runtime.maxMemory() / 1024 / 1024 + "M");
 
         Process process = runtime.exec("notepad.exe");
         Thread.sleep(3000);

@@ -32,14 +32,14 @@ interface Fruit {
 class Apple implements Fruit {
 
     public void squeeze() {
-        System.out.println("姒ㄥ嚭涓�鏉嫻鏋滄眮");
+        System.out.println("榨出一杯苹果汁");
     }
 
 }
 
 class Orange implements Fruit {
     public void squeeze() {
-        System.out.println("姒ㄥ嚭涓�鏉瀛愭眮");
+        System.out.println("榨出一杯橘子汁");
 
     }
 }

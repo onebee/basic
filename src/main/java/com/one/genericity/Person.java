@@ -1,6 +1,6 @@
 package com.one.genericity;
 
-//å«æœ‰æ³›å‹çš„ç±»
+//º¬ÓĞ·ºĞÍµÄÀà
 public class Person<E> {
 
     E name;
@@ -13,7 +13,7 @@ public class Person<E> {
         this.name = name;
     }
 
-    // å«æœ‰æ³›å‹çš„æ–¹æ³•
+    // º¬ÓĞ·ºĞÍµÄ·½·¨
     public <T> void show2(T t) {
         System.out.println(t);
     }

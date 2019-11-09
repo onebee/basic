@@ -8,14 +8,14 @@ import java.io.IOException;
 public class Test2 {
     public static void main(String[] args) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException {
 
-//        	 * (1) å†™ä¸€ä¸ªPropertiesæ ¼å¼çš„é…ç½®æ–‡ä»¶ï¼Œé…ç½®ç±»çš„å®Œæ•´åç§°ã€‚
-//	 * (2) å†™ä¸€ä¸ªç¨‹åºï¼Œè¯»å–è¿™ä¸ªPropertiesé…ç½®æ–‡ä»¶ï¼Œè·å¾—ç±»çš„å®Œæ•´åç§°å¹¶åŠ è½½è¿™ä¸ªç±»ï¼Œç”¨åå°„çš„æ–¹å¼è¿è¡Œrunæ–¹æ³•ã€‚
+//        	 * (1) Ğ´Ò»¸öProperties¸ñÊ½µÄÅäÖÃÎÄ¼ş£¬ÅäÖÃÀàµÄÍêÕûÃû³Æ¡£
+//	 * (2) Ğ´Ò»¸ö³ÌĞò£¬¶ÁÈ¡Õâ¸öPropertiesÅäÖÃÎÄ¼ş£¬»ñµÃÀàµÄÍêÕûÃû³Æ²¢¼ÓÔØÕâ¸öÀà£¬ÓÃ·´ÉäµÄ·½Ê½ÔËĞĞrun·½·¨¡£
 
         BufferedReader bufferedReader = new BufferedReader(new FileReader("xxx.properties"));
         Class clazz = (Class) Class.forName(bufferedReader.readLine());
 
 
-        // é€šè¿‡å­—èŠ‚ç å¯¹è±¡åˆ›å»ºå¯¹è±¡
+        // Í¨¹ı×Ö½ÚÂë¶ÔÏó´´½¨¶ÔÏó
         DemoClass dc = (DemoClass) clazz.newInstance();
         dc.run();
     }

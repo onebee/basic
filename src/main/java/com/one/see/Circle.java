@@ -36,7 +36,7 @@ public class Circle {
     }
 
     /**
-     * ç¢°æ’æ£€æµ‹
+     * Åö×²¼ì²â
      *
      * @param minx
      * @param miny
@@ -66,9 +66,9 @@ public class Circle {
 
     }
 
-    // åˆ¤æ–­ä¼ å…¥çš„åæ ‡æ˜¯å¦åœ¨è¯¥åœ†å†…
+    // ÅĞ¶Ï´«ÈëµÄ×ø±êÊÇ·ñÔÚ¸ÃÔ²ÄÚ
     public boolean contain(Point point) {
-       // åˆ¤æ–­ç‚¹åˆ°åœ†å¿ƒçš„è·ç¦»æ˜¯å¦å°äºR
+       // ÅĞ¶Ïµãµ½Ô²ĞÄµÄ¾àÀëÊÇ·ñĞ¡ÓÚR
         return (x-point.x)*(x-point.x) + (y-point.y)*(y-point.y) <= r*r;
     }
 }

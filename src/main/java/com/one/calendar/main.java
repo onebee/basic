@@ -19,7 +19,7 @@ public class main {
         int prevDays = calendar.get(Calendar.DAY_OF_WEEK) - 1;
         System.out.println("prevDays : " + prevDays);
 
-        // å°†æ—¥ç¨‹çš„å¤©æ•°ç§»åŠ¨åˆ°éœ€è¦ç»˜åˆ¶çš„ç¬¬ä¸€å¤©
+        // ½«ÈÕ³ÌµÄÌìÊıÒÆ¶¯µ½ĞèÒª»æÖÆµÄµÚÒ»Ìì
         calendar.add(Calendar.DAY_OF_MONTH,-prevDays);
 
         int maxCellCount = 6*7;
