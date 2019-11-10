@@ -1,8 +1,6 @@
 ﻿package com.one.play.linkedList;
 
 public class LinkedList<E> {
-
-
     private class Node{
         public E e;
         public Node next;
@@ -25,4 +23,31 @@ public class LinkedList<E> {
             return e.toString();
         }
     }
+
+    private Node head;
+    private int size;
+
+    public LinkedList() {
+        head=null;
+        size = 0;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return size==0;
+    }
+
+
+    // 在链表中添加新的元素
+    public void addFirst(E e) {
+        Node node = new Node(e);
+        node.next = head;
+        head = node;
+    }
+
+
+
 }
