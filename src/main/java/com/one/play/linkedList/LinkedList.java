@@ -43,10 +43,46 @@ public class LinkedList<E> {
 
     // 在链表中添加新的元素
     public void addFirst(E e) {
-        Node node = new Node(e);
-        node.next = head;
-        head = node;
+//        Node node = new Node(e);
+//        node.next = head;
+//        head = node;
+        head = new Node(e, head);
+        size++;
     }
+
+    // 在链表的 index 位置添加新的元素 e,练习用
+    public void add(int index, E e) {
+        if (index < 0 || index > size) {
+            throw new IllegalArgumentException("Add fail ,Illegal index .");
+        }
+        if (index == 0) {
+            addFirst(e);
+        } else {
+            Node pre = head;
+            for (int i = 0; i < index - 1; i++) {
+                pre = pre.next;
+
+
+//                Node node = new Node(e);
+////                node.next = pre.next;
+////                pre.next = node;
+
+                pre.next = new Node(e, pre.next);
+                size++;
+            }
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+
 
 
 
