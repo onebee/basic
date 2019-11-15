@@ -3,14 +3,10 @@ package com.one.kotlin.`04`
 fun main(args: Array<String>) {
 
     var nums = 1..100
-    for (num in nums) {
+    for (num in nums step 10) {
         println(" ${num} ,")
     }
 
-    var nums1 = 1 until 100
-    for (num in nums1) {
-        println(" ${num} ,ddd")
-    }
 
 }
 fun heat(str: String?): String {
