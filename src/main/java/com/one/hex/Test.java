@@ -5,7 +5,7 @@ public class Test {
     public static void main(String[] args) {
 
 
-        int i = Integer.parseInt("008c",16);
-        System.out.println(i);
+       String hex = "88770D53E80FBA05323200313232350F";
+        System.out.println(hex.length());
     }
 }

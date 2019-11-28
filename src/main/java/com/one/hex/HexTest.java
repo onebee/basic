@@ -22,7 +22,7 @@ public class HexTest {
 //
 //
 
-        String data = "0601e80f2a01";
+        String data = "0601e80f2A050631";
 //          String data = "0601E80F2A0A";
         int xor = getXOR(ByteUtil.hexStr2bytes(data));
         System.out.println(ByteUtil.decimal2fitHex(xor));
@@ -54,6 +54,12 @@ public class HexTest {
 //            ValueBean.CommandValueBean commandValueBean = commandValue.get(i);
 //            System.out.println(commandValueBean.toString());
 //        }
+
+//        String cmd = "8855003843E80F7B226B31223A227332222C226B32223A226465766963656964222C226465766963656964223A225330315445535431227DFB982593";
+//        String cmd = "885500465FE80F7B226B31223A227332222C226B32223A2257616B657570496E666F222C22776F7264223A226E693368616F336B65316C6534222C227573726964223A22227DA7968C2A";
+//        System.out.println(parseHex2String(cmd));
+
+
     }
 
     private static String parseHex2String(String hex) {
