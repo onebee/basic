@@ -22,10 +22,10 @@ public class HexTest {
 //
 //
 
-        String data = "0601e80f2A050631";
-//          String data = "0601E80F2A0A";
-        int xor = getXOR(ByteUtil.hexStr2bytes(data));
-        System.out.println(ByteUtil.decimal2fitHex(xor));
+//        String data = "0601e80f2A050631";
+////          String data = "0601E80F2A0A";
+//        int xor = getXOR(ByteUtil.hexStr2bytes(data));
+//        System.out.println(ByteUtil.decimal2fitHex(xor));
 
 //        String hex =  "88 55 00 46 18 E8 0F 7B226B31223A227332222C226B32223A2257616B6575 70496E";
 //        String wifiConfig =  "8855 0011 01 E8 0F 7B226B3122 3A2231227D 29 D9 7F 3F";
@@ -59,6 +59,9 @@ public class HexTest {
 //        String cmd = "885500465FE80F7B226B31223A227332222C226B32223A2257616B657570496E666F222C22776F7264223A226E693368616F336B65316C6534222C227573726964223A22227DA7968C2A";
 //        System.out.println(parseHex2String(cmd));
 
+        String msg = "8855008B2CE80F7B226B31223A226332222C226B32223A225265636F6E67697A65496E666F222C2276616C7565223A227B5C224170705C223A5C224461696C79496E666F5C222C5C22416374696F6E5C223A5C224F70656E5C222C5C22636F6D6D616E6456616C75655C223A5B7B5C2256616C75655C223A5C224441494C595F494E464F5C227D5D7D227D8307BBC9";
+
+        System.out.println(parseHex2String(msg));
 
     }
 
