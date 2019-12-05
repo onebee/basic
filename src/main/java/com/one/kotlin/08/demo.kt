@@ -10,4 +10,8 @@ fun main(args: Array<String>) {
     println(rec.witdh)
 
     rec.smile()
+
+
+    var man1:Man
+
 }
