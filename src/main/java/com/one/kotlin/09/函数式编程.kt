@@ -10,6 +10,11 @@ fun main(args: Array<String>) {
     var name = listOf<String>("tom", "jerry", "lucy")
     name.forEach(print)
 
+    name.forEach {
+
+        println(it)
+    }
+
 }
 
 var print = fun (name: String): Unit {
