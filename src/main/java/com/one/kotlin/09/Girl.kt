@@ -44,11 +44,23 @@ fun main(args: Array<String>) {
 //    }
 //    println(new)
 
-list.groupBy {
-    it.address
-}.get("河南")?.forEach {
+//list.groupBy {
+//    it.address
+//}.get("河南")?.forEach {
+//
+//    println(it)
+//}
+    list findGirl 20
 
-    println(it)
 }
 
+
+infix fun List<Girl>.findGirl(age:Int){
+    filter {
+        it.age<age
+    }.forEach {
+        println(it)
+    }
+
 }
+
