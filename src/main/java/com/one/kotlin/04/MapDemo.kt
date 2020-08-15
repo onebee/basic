@@ -5,9 +5,8 @@ import java.util.*
 fun main(args: Array<String>) {
 
 
+    var str = "aaaa "
 
-    var map = TreeMap<String,String>()
-
-    
+    println(str.fuck())
 
 }
