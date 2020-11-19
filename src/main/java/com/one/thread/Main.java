@@ -8,31 +8,9 @@ public class Main {
     public static void main(String[] args) {
 
 //        thread();
-
 //        runnable();
-
 //        callable();
 
-//        Random random = new Random();
-//        boolean b = random.nextBoolean();
-//
-//        System.out.println(b)
-
-        String aa="sdad中国,.ss。";
-        char[] charArray = aa.toCharArray();
-        for (char c : charArray) {
-
-            String  cnorEn = isCnorEn(c);
-            System.out.println(c+":"+cnorEn);
-        }
-    }
-    static String isCnorEn(char c){
-        if(c >= 0x0391 && c <= 0xFFE5) //中文字符
-            return "中文";
-        if(c>=0x0000 && c<=0x00FF){ //英文字符
-            return "英文";
-        }
-        return "其他";
     }
 
     static void thread() {
