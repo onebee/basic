@@ -11,6 +11,8 @@ public class Main {
 //        runnable();
 //        callable();
 
+        executor();
+
     }
 
     static void thread() {
@@ -41,6 +43,28 @@ public class Main {
 
     }
 
+    static void executor(){
+        ExecutorService executorService = Executors.newFixedThreadPool(25);
+
+
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                String name = Thread.currentThread().getName();
+                System.out.println(" runnable running and thread name = " + name);
+            }
+        };
+
+        executorService.execute(runnable);
+        executorService.execute(runnable);
+        executorService.execute(runnable);
+        executorService.execute(runnable);
+        executorService.execute(runnable);
+        executorService.execute(runnable);
+
+        executorService.shutdown();
+    }
+
     static void callable() {
         Callable<String> callable = new Callable<String>() {
 
@@ -50,6 +74,7 @@ public class Main {
                 return "Done";
             }
         };
+
 
         ExecutorService executorService = Executors.newCachedThreadPool();
         Future<String> future = executorService.submit(callable);
