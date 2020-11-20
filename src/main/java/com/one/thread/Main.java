@@ -9,8 +9,10 @@ public class Main {
 //        thread();
 //        runnable();
 //        executor();
-        callable();
+//        callable();
 
+//       new ThreadInteractionDemo().runTest();
+        new WaitDemo().runTest();
     }
 
     static void thread() {
