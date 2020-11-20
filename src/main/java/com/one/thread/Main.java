@@ -1,6 +1,5 @@
 package com.one.thread;
 
-import java.util.Random;
 import java.util.concurrent.*;
 
 public class Main {
@@ -9,9 +8,8 @@ public class Main {
 
 //        thread();
 //        runnable();
-//        callable();
-
-        executor();
+//        executor();
+        callable();
 
     }
 
@@ -29,32 +27,17 @@ public class Main {
     }
 
     static void runnable() {
-
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("thread start with runnable");
-            }
-        };
-
+        Runnable runnable = () -> System.out.println("thread start with runnable");
         Thread thread = new Thread(runnable);
         thread.start();
-
-
     }
 
-    static void executor(){
+    static void executor() {
         ExecutorService executorService = Executors.newFixedThreadPool(25);
-
-
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                String name = Thread.currentThread().getName();
-                System.out.println(" runnable running and thread name = " + name);
-            }
+        Runnable runnable = () -> {
+            String name = Thread.currentThread().getName();
+            System.out.println(" runnable running and thread name = " + name);
         };
-
         executorService.execute(runnable);
         executorService.execute(runnable);
         executorService.execute(runnable);
@@ -66,16 +49,16 @@ public class Main {
     }
 
     static void callable() {
+        /**
+         * Callable 可以看成有返回值的 runnable
+         */
         Callable<String> callable = new Callable<String>() {
-
             @Override
             public String call() throws Exception {
                 Thread.sleep(5000);
                 return "Done";
             }
         };
-
-
         ExecutorService executorService = Executors.newCachedThreadPool();
         Future<String> future = executorService.submit(callable);
         while (true) {
@@ -86,12 +69,16 @@ public class Main {
                 } catch (InterruptedException | ExecutionException e) {
                     e.printStackTrace();
                 }
+//                executorService.shutdown();
+                break;
             }
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
+            System.out.println(" Game Over");
         }
 
 
