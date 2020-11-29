@@ -1,7 +1,5 @@
 package com.one.xiang.generic;
 
-import com.sun.scenario.effect.impl.sw.java.JSWPhongLighting_SPOTPeer;
-import com.sun.tools.corba.se.idl.constExpr.Or;
 
 public class WildChar {
 
